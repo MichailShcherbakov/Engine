@@ -1,0 +1,6 @@
+# own
+.bin
+.build
+Logs/*.*
+Libs/*.*
+.vscode/settings.json
