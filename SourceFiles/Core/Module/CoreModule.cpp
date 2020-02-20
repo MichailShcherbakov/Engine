@@ -1,6 +1,7 @@
 #include "CoreModule.h"
 #include "Engine/Engine.inl"
 
+#include <iostream>
 
 CoreModule::CoreModule()
 {
@@ -14,12 +15,16 @@ CoreModule::~CoreModule()
 
 void CoreModule::Initialize()
 {
+	std::cout << "Initialize Engine..." << std::endl;
+
 	gEngine = new ICoreGlobalVariable();
 
 	InitializeParams params;
 	params.gEngine = gEngine;
 	
 	this->LoadEngineModules(params);
+
+	std::cout << "The engine was successfully initialized." << std::endl;
 }
 
 void CoreModule::Run()

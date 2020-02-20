@@ -7,3 +7,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${ENGINE_ROOT}/SourceFiles/Common
 )
+
+if (UNIX)
+    target_link_libraries(${PROJECT_NAME} ${CMAKE_DL_LIBS})
+endif()

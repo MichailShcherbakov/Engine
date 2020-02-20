@@ -7,6 +7,8 @@
 
         #define USE_PLATFORM_LINUX
 
+        #include <dlfcn.h>
+
 		typedef void* EngineModule;
 
         #ifndef DLL_EXPORT
@@ -16,6 +18,10 @@
         #ifndef DLL_IMPORT
 		    #define DLL_IMPORT __attribute__ ((dllimport))
         #endif // DLL_IMPORT
+
+        #ifndef ENGINE_API
+			#define ENGINE_API
+		#endif // ENGINE_API
 
 	#endif // USE_PLATFORM_LINUX
 

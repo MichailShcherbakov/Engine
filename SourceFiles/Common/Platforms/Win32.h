@@ -19,6 +19,10 @@
 		    #define DLL_IMPORT __declspec(dllimport)
         #endif // DLL_IMPORT
 
+		#ifndef ENGINE_API
+			#define ENGINE_API __stdcall
+		#endif // ENGINE_API
+
 	#endif // USE_PLATFORM_WINDOWS
 
 #endif // _WIN64
