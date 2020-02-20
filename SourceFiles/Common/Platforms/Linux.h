@@ -1,7 +1,7 @@
 #ifndef _LINUX_PLATFORM_H_
 #define _LINUX_PLATFORM_H_
 
-#ifdef __GNUC__
+#ifndef _WIN32
 
 	#ifndef USE_PLATFORM_LINUX
 

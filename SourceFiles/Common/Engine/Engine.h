@@ -17,8 +17,6 @@
 #include "Platforms/Win32.h"
 #include "Platforms/Linux.h"
 
-
-
 #define REGISTER_ENGINE_MODULE(name)                                \
 extern "C"                                                          \
 {                                                                   \
@@ -42,7 +40,15 @@ static EngineModule LoadModule(const std::string& path)
 	EngineModule module = nullptr;
 
 #ifdef USE_PLATFORM_WINDOWS
-	std::string dllPath = "lib" + path + ".dll";
+
+	std::string dllPath;
+
+#ifdef __MINGW32__
+	dllPath = "lib" + path + ".dll";
+#else
+	dllPath = path + ".dll";
+#endif // __MINGW32__
+
 	module = LoadLibraryA(dllPath.c_str());
 #endif
 

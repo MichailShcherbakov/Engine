@@ -1,6 +1,7 @@
 # own
 .bin
 .build
+.solution
 Logs/*.*
 Libs/*.*
 .vscode/settings.json

@@ -1,7 +1,7 @@
 #ifndef _WIN32_PLATFORM_H_
 #define _WIN32_PLATFORM_H_
 
-#ifdef _WIN64
+#ifdef _WIN32
 
 	#ifndef USE_PLATFORM_WINDOWS
 
