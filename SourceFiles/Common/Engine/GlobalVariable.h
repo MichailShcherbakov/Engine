@@ -7,13 +7,6 @@ struct ISurface;
 
 struct IECS
 {
-    ~IECS()
-    {
-        SAFE_DELETE(pComponentManager);
-        SAFE_DELETE(pEntityManager);
-        SAFE_DELETE(pSystemManager);
-    }
-
 	void* pComponentManager = nullptr;
 	void* pEntityManager = nullptr;
 	void* pSystemManager = nullptr;

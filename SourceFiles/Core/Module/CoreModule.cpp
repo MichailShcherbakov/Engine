@@ -18,13 +18,16 @@ void CoreModule::Initialize()
 	std::cout << "Initialize Engine..." << std::endl;
 
 	gEngine = new ICoreGlobalVariable();
-
+	gEngine->pCore = this;
+	
 	InitializeParams params;
 	params.gEngine = gEngine;
 	
 	this->LoadEngineModules(params);
 
 	std::cout << "The engine was successfully initialized." << std::endl;
+
+	gEngine->pCore->EngineEvent(EEngineEvent::EVENT_ENGINE_CORE_INIT_COMPLETE);
 }
 
 void CoreModule::Run()
@@ -90,5 +93,5 @@ void CoreModule::ReleaseEngineModules()
 
 void CoreModule::EngineEvent(const EEngineEvent& event)
 {
-    
+    emit m_OnEngineEvent(event);
 }

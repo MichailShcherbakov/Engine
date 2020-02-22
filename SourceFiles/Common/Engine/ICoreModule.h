@@ -4,6 +4,8 @@
 #include <string>
 #include <cstdint>
 
+#include "EventSystem/Event.h"
+
 enum class EEngineEvent : uint16_t
 {
 	EVENT_ENGINE_CORE_INIT_COMPLETE,
@@ -14,6 +16,8 @@ enum class EEngineEvent : uint16_t
 
 struct ICoreModule
 {
+    MAKE_EVENT(OnEngineEvent, const EEngineEvent&)
+
     typedef ICoreModule* (*TModulePoint)();
 
     virtual ~ICoreModule() {}

@@ -11,5 +11,6 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 add_subdirectory(${ENGINE_ROOT}/SourceFiles/Common)
 add_subdirectory(${ENGINE_ROOT}/SourceFiles/Core)
+add_subdirectory(${ENGINE_ROOT}/SourceFiles/GLFW)
 add_subdirectory(${ENGINE_ROOT}/SourceFiles/RendererOpenGL)
 add_subdirectory(${ENGINE_ROOT}/SourceFiles/Launcher)

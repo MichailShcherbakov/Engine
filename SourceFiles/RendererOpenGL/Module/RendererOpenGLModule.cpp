@@ -12,7 +12,7 @@ RendererOpenGLModule::~RendererOpenGLModule()
 
 void RendererOpenGLModule::Initialize()
 {
-
+    
 }
 
 void RendererOpenGLModule::Update() 

@@ -13,13 +13,13 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/gdb.exe",
-            "setupCommands": [
+           /* "setupCommands": [
                 {
                     "description": "Включить автоматическое форматирование для gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ],
+            ],*/
             "preLaunchTask": "Build Engine Win32"
         },
         {

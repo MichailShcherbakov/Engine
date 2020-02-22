@@ -1,6 +1,7 @@
 # own
 .bin
 .build
+build
 .solution
 Logs/*.*
 Libs/*.*

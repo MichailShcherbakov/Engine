@@ -54,9 +54,9 @@ private:
 private:
 	std::vector<std::string> modules = 
 	{
-		//"Engine.GLFW", // Surface::Renderer
-		//"Engine.RenderVulkan", // Type::Renderer
-		"Engine.RendererOpenGL", // Type::Renderer
+		"Engine.GLFW", 				// Surface::GLFW
+		"Engine.RendererOpenGL", 	// Renderer::OpenGL
+		//"Engine.RenderVulkan", 	// Renderer::Vulkan
 	};
 };
 
